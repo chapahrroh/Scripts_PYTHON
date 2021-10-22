@@ -1,4 +1,5 @@
 #Autor: Eduardo Chaparro
+
 from requests import get, exceptions
 
 def pingCheck():
@@ -8,8 +9,7 @@ def pingCheck():
         get("http://"+direccion, timeout=3)
         print('conectado')
     except exceptions.ConnectionError:
-        print('no conectado')
-
+        print( "\033[1;31;42m"+"no conectado")
 
 pingCheck()
 
